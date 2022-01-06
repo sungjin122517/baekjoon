@@ -7,15 +7,12 @@ int main()
     cin >> n;
     
     for (int i=1; i<=n; i++) {
-        if (i%2==1) {
-            for (int j=1; j<=n; j++)
-                cout << "* ";
-        }
-        else {
-            for (int j=1; j<=n; j++)
-                cout << " *";
-        }
-        cout << '\n';
+        for (int j=n; j>i; j--)
+            cout << " ";
+        for (int k=1; k<=i; k++)
+            cout << "* ";
+        cout << "\n";
     }
+
     return 0;
 }
