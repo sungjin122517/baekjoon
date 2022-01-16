@@ -4,8 +4,9 @@ using namespace std;
 
 // Bertrand's postulate
 
+bool primeNum[123456*2+1];  // prime number == false
+
 int findPrime(int n) {
-    bool primeNum[123456*2+1];  // prime number == false
     int sum=0;
     primeNum[0]=true;
     primeNum[1]=true;
