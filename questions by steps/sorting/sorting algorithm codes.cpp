@@ -79,3 +79,32 @@ void mergeSort(int arr[], int begin, int end) {
     mergeSort(arr, mid+1, end);
     merge(arr, begin, mid, end);
 }
+
+void quickSort(int arr[], int i, int j) {
+    if (i >= j)
+        return;
+    
+    int pivot = arr[(i+j)/2];  // pivot in the middle
+    int left=i, right=j;
+
+    /* when left>pivot and right<pivot, they stop and exchange elements.
+    This is repeated until left>right (either of them passes by the pivot).
+    */
+    while (left<=right) {
+        while (arr[left]<pivot)
+            left++;
+        while (arr[right]>pivot)
+            right--;
+        if (left<=right) {
+            swap(&arr[left], &arr[right]);
+            left++;
+            right--;
+        }
+    }
+
+    // by doing recursion, the array is partitioned into two and they are
+    // quick-sorted again until the whole array is sorted.
+    quickSort(arr, i, right);
+    quickSort(arr, left, j);
+
+}
