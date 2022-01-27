@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 void swap(int *xp, int *yp) {
@@ -108,3 +109,9 @@ void quickSort(int arr[], int i, int j) {
     quickSort(arr, left, j);
 
 }
+
+/*
+Here we take two parameters, the beginning of the array and the length
+n upto which we want the array to be sorted.
+*/
+sort(arr, arr+n);
