@@ -2,7 +2,7 @@
 #include <algorithm>
 using namespace std;
 
-// sort words
+// sort words by length and alphabet
 
 /*
 
