@@ -33,3 +33,19 @@ e.g. Find whether a pair **(X, Y)** exists in an array A of **N** elements whose
 - For each **i**, the inner loop **j** loop runs **N** times.
 
 So total execution time is _**N*c + N*N*c + c**_. Now ignore the lower order terms since the lower order terms are relatively insignificant for large input, therefore only the highest order term is taken (without constant) which is _**N*N**_ in this case. Hence, the time complexity is O(N^2).
+
+### sort()와 stable_sort() 함수
+
+**sort( )**:
+
+- 내부적으로 **퀵 정렬**로 구현 되어있음
+- 시간 복잡도: O(nlogn)
+- 불안정 정렬
+
+**stable_sort( )**:
+
+- 내부적으로 **병합 정렬**로 구현 되어있음
+- 시간 복잡도: O(nlogn)
+- 안정 정렬
+
+또 다른 차이: 정렬 할 때 중복되는 (예를 들어)숫자를 순서 뒤바꾸지 않고 그대로 가져오냐(stable sort) 랜덤으로 가져오냐(unstable sort)의 차이.
